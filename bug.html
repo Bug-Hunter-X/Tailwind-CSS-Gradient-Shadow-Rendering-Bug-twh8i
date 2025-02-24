@@ -1,0 +1,8 @@
+```html
+<div class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-lg shadow-lg">
+  <!-- Content here -->
+</div>
+```
+This code uses Tailwind CSS classes for a gradient background.  However, if the `shadow-lg` class is applied *after* the gradient, it will render incorrectly in some browsers or configurations, with the shadow appearing behind the gradient instead of on top.
+
+This is often due to the stacking context in CSS. The gradient creates its own stacking context, causing the shadow to be rendered behind it.
